@@ -35,6 +35,14 @@ class ClientesController extends Controller
     $response = new \stdClass();
 
     $cliente = new Cliente();
+    $cliente->tipo = $request->tipo;
+    $cliente->tipo_documento = $request->tipo_documento;
+    $cliente->numero_documento = $request->numero_documento;
+    $cliente->apellido_paterno = $request->apellido_paterno;
+    $cliente->apellido_materno = $request->apellido_materno;
+    $cliente->nombres = $request->nombres;
+    $cliente->direccion = $request->direccion;
+    $cliente->ubigeo = $request->ubigeo;
     $cliente->save();
 
     $response->success=true;

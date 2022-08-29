@@ -21,3 +21,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::get('/v1/clientes', [ClientesController::class, 'getAll']);
+Route::get('/v1/clientes/{id}', [ClientesController::class, 'getItem']);
+
+Route::post('/v1/clientes', [ClientesController::class, 'save']);

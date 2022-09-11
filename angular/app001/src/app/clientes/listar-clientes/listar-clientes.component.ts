@@ -10,6 +10,9 @@ export class ListarClientesComponent implements OnInit {
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();
+
+  txtValor:String="";
+  
   clientes: any[] = [];
 
   constructor() { }

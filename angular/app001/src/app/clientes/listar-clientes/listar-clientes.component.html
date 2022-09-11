@@ -1,1 +1,20 @@
 <p>listar-clientes works!</p>
+
+<button (click)="addCliente()">add cliente</button>
+<button (click)="removeCliente()">delete cliente</button>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+    <thead>
+      <tr>
+        <th>Tipo</th>
+        <th>Número Documento</th>
+        <th>Nombres</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.tipo }}</td>
+        <td>{{ cliente.numero_documento }}</td>
+        <td>{{ cliente.nombres }}</td>
+      </tr>
+    </tbody>
+  </table>

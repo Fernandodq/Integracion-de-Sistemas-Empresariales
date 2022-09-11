@@ -8,6 +8,8 @@ import { ListarClientesComponent } from './clientes/listar-clientes/listar-clien
 import { ListarProductosComponent } from './productos/listar-productos/listar-productos.component';
 import { NuevoProductoComponent } from './productos/nuevo-producto/nuevo-producto.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
+import { FooterComponent } from './footer/footer.component';
+import { DataTablesModule } from 'angular-datatables';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,13 @@ import { MainHeaderComponent } from './main-header/main-header.component';
     ListarClientesComponent,
     ListarProductosComponent,
     NuevoProductoComponent,
-    MainHeaderComponent
+    MainHeaderComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    DataTablesModule
   ],
   providers: [],
   bootstrap: [AppComponent]

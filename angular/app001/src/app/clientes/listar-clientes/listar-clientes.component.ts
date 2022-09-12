@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {Subject} from 'rxjs';
+import { Subject } from 'rxjs';
+
+import { ClientesService } from '../clientes.service';
 
 @Component({
   selector: 'app-listar-clientes',
@@ -12,11 +14,11 @@ export class ListarClientesComponent implements OnInit {
   dtTrigger: Subject<any> = new Subject<any>();
 
   txtValor:String="";
-  
+
   clientes: any[] = [];
 
   constructor() { }
-
+/*
   addCliente()
   {
     this.clientes.push({tipo:"Persona", numero_documento:"12345678", nombres:"Fernando"});
@@ -28,7 +30,7 @@ export class ListarClientesComponent implements OnInit {
     this.clientes.splice(this.clientes.length-1,1);
     
   }
-
+*/
 
   ngOnInit(): void {
 

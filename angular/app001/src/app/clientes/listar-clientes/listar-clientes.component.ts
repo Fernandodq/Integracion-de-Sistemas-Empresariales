@@ -17,7 +17,7 @@ export class ListarClientesComponent implements OnInit {
 
   clientes: any[] = [];
 
-  constructor() { }
+  constructor(private service:ClientesService) { }
 /*
   addCliente()
   {
@@ -39,7 +39,10 @@ export class ListarClientesComponent implements OnInit {
       pageLength: 10
     };
 
-    this.clientes=[{tipo:"Persona", numero_documento:"12345678", nombres:"Fernando"}];
+    //this.clientes=[{tipo:"Persona", numero_documento:"12345678", nombres:"Fernando"}];
+    this.service.getclientes().subscribe((Response)=>{
+      
+    })
     this.dtTrigger.next(null);
 
   }
